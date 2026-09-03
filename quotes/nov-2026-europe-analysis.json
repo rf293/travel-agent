@@ -1,0 +1,1959 @@
+[
+  {
+    "sequence": "HAG-ATH-STO",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "AMS",
+    "last_airport": "ARN",
+    "combined_usd": 1479.19,
+    "combined_cad": 2056.08,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-07",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-08",
+        "depart": "2026-11-12",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-13",
+        "depart": "2026-11-22",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 983.0,
+        "currency": "CAD",
+        "price_usd": 707.1942446043166,
+        "airlines": [
+          "United"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 742.1942446043166,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 702.0,
+        "currency": "USD",
+        "price_usd": 702.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 737.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-ATH-STO",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "AMS",
+    "last_airport": "ARN",
+    "combined_usd": 1488.91,
+    "combined_cad": 2069.58,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-08",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-09",
+        "depart": "2026-11-13",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-14",
+        "depart": "2026-11-23",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 927.0,
+        "currency": "CAD",
+        "price_usd": 666.9064748201439,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 701.9064748201439,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 752.0,
+        "currency": "USD",
+        "price_usd": 752.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 787.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-STO-ATH",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "AMS",
+    "last_airport": "ATH",
+    "combined_usd": 1536.1,
+    "combined_cad": 2135.18,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-08",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-09",
+        "depart": "2026-11-18",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-19",
+        "depart": "2026-11-23",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 937.0,
+        "currency": "CAD",
+        "price_usd": 674.1007194244605,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 709.1007194244605,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 792.0,
+        "currency": "USD",
+        "price_usd": 792.0,
+        "airlines": [
+          "American"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 827.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-STO-ATH",
+    "start_day": 6,
+    "outbound_date": "2026-11-06",
+    "return_date": "2026-11-24",
+    "first_airport": "AMS",
+    "last_airport": "ATH",
+    "combined_usd": 1536.1,
+    "combined_cad": 2135.18,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-06",
+        "depart": "2026-11-09",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-10",
+        "depart": "2026-11-19",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-20",
+        "depart": "2026-11-24",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 937.0,
+        "currency": "CAD",
+        "price_usd": 674.1007194244605,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 709.1007194244605,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 792.0,
+        "currency": "USD",
+        "price_usd": 792.0,
+        "airlines": [
+          "American"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 827.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-STO-ATH",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "AMS",
+    "last_airport": "ATH",
+    "combined_usd": 1566.32,
+    "combined_cad": 2177.18,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-07",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-08",
+        "depart": "2026-11-17",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-18",
+        "depart": "2026-11-22",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 979.0,
+        "currency": "CAD",
+        "price_usd": 704.31654676259,
+        "airlines": [
+          "Delta"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 739.31654676259,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 792.0,
+        "currency": "USD",
+        "price_usd": 792.0,
+        "airlines": [
+          "American"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 827.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-ATH-STO",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "AMS",
+    "last_airport": "ARN",
+    "combined_usd": 1580.63,
+    "combined_cad": 2197.08,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-06",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-07",
+        "depart": "2026-11-11",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-12",
+        "depart": "2026-11-21",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1124.0,
+        "currency": "CAD",
+        "price_usd": 808.6330935251799,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 843.6330935251799,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 702.0,
+        "currency": "USD",
+        "price_usd": 702.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 737.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-ATH-STO",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "AMS",
+    "last_airport": "ARN",
+    "combined_usd": 1598.62,
+    "combined_cad": 2222.08,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-05",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-06",
+        "depart": "2026-11-10",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-11",
+        "depart": "2026-11-20",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1149.0,
+        "currency": "CAD",
+        "price_usd": 826.6187050359713,
+        "airlines": [
+          "Delta"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 861.6187050359713,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 702.0,
+        "currency": "USD",
+        "price_usd": 702.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 737.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-STO-ATH",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "AMS",
+    "last_airport": "ATH",
+    "combined_usd": 1634.29,
+    "combined_cad": 2271.67,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-06",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-07",
+        "depart": "2026-11-16",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-17",
+        "depart": "2026-11-21",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 947.0,
+        "currency": "CAD",
+        "price_usd": 681.294964028777,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 716.294964028777,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 883.0,
+        "currency": "USD",
+        "price_usd": 883.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 918.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "HAG-STO-ATH",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "AMS",
+    "last_airport": "ATH",
+    "combined_usd": 1653.32,
+    "combined_cad": 2298.11,
+    "segments": [
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-05",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-06",
+        "depart": "2026-11-15",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-16",
+        "depart": "2026-11-20",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 979.0,
+        "currency": "CAD",
+        "price_usd": 704.31654676259,
+        "airlines": [
+          "Delta"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 739.31654676259,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 879.0,
+        "currency": "USD",
+        "price_usd": 879.0,
+        "airlines": [
+          "Delta"
+        ],
+        "stops_by_leg": [
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 914.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-STO-HAG",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "ATH",
+    "last_airport": "AMS",
+    "combined_usd": 1673.81,
+    "combined_cad": 2326.6,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-06",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-07",
+        "depart": "2026-11-16",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-17",
+        "depart": "2026-11-20",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1020.0,
+        "currency": "CAD",
+        "price_usd": 733.8129496402878,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 768.8129496402878,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 870.0,
+        "currency": "USD",
+        "price_usd": 870.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 905.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-ATH-HAG",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "ARN",
+    "last_airport": "AMS",
+    "combined_usd": 1702.31,
+    "combined_cad": 2366.21,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-12",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-13",
+        "depart": "2026-11-17",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-18",
+        "depart": "2026-11-21",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1061.0,
+        "currency": "CAD",
+        "price_usd": 763.3093525179856,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 798.3093525179856,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 869.0,
+        "currency": "USD",
+        "price_usd": 869.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 904.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-STO-HAG",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "ATH",
+    "last_airport": "AMS",
+    "combined_usd": 1723.81,
+    "combined_cad": 2396.1,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-07",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-08",
+        "depart": "2026-11-17",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-18",
+        "depart": "2026-11-21",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1020.0,
+        "currency": "CAD",
+        "price_usd": 733.8129496402878,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 768.8129496402878,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 920.0,
+        "currency": "USD",
+        "price_usd": 920.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 955.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-ATH-HAG",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "ARN",
+    "last_airport": "AMS",
+    "combined_usd": 1740.08,
+    "combined_cad": 2418.71,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-11",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-12",
+        "depart": "2026-11-16",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-17",
+        "depart": "2026-11-20",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1183.0,
+        "currency": "CAD",
+        "price_usd": 851.0791366906475,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 886.0791366906475,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 819.0,
+        "currency": "USD",
+        "price_usd": 819.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 854.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-HAG-ATH",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "ARN",
+    "last_airport": "ATH",
+    "combined_usd": 1798.03,
+    "combined_cad": 2499.26,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-12",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-13",
+        "depart": "2026-11-16",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-17",
+        "depart": "2026-11-21",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1201.0,
+        "currency": "CAD",
+        "price_usd": 864.0287769784173,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 899.0287769784173,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 864.0,
+        "currency": "USD",
+        "price_usd": 864.0,
+        "airlines": [
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 899.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-ATH-HAG",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "ARN",
+    "last_airport": "AMS",
+    "combined_usd": 1818.14,
+    "combined_cad": 2527.21,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-13",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-14",
+        "depart": "2026-11-18",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-19",
+        "depart": "2026-11-22",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1222.0,
+        "currency": "CAD",
+        "price_usd": 879.136690647482,
+        "airlines": [
+          "KLM"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 914.136690647482,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 869.0,
+        "currency": "USD",
+        "price_usd": 869.0,
+        "airlines": [
+          "British Airways"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 904.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-ATH-HAG",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "ARN",
+    "last_airport": "AMS",
+    "combined_usd": 1852.73,
+    "combined_cad": 2575.3,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-14",
+        "days": 10
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-15",
+        "depart": "2026-11-19",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-20",
+        "depart": "2026-11-23",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1227.0,
+        "currency": "CAD",
+        "price_usd": 882.7338129496403,
+        "airlines": [
+          "KLM"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 917.7338129496403,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 900.0,
+        "currency": "USD",
+        "price_usd": 900.0,
+        "airlines": [
+          "Turkish Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 935.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-HAG-STO",
+    "start_day": 3,
+    "outbound_date": "2026-11-03",
+    "return_date": "2026-11-21",
+    "first_airport": "ATH",
+    "last_airport": "ARN",
+    "combined_usd": 1865.15,
+    "combined_cad": 2592.56,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-03",
+        "depart": "2026-11-07",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-08",
+        "depart": "2026-11-11",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-12",
+        "depart": "2026-11-21",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1336.0,
+        "currency": "CAD",
+        "price_usd": 961.1510791366907,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 996.1510791366907,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 834.0,
+        "currency": "USD",
+        "price_usd": 834.0,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 869.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-HAG-STO",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "ATH",
+    "last_airport": "ARN",
+    "combined_usd": 1899.6,
+    "combined_cad": 2640.45,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-06",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-07",
+        "depart": "2026-11-10",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-11",
+        "depart": "2026-11-20",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1452.0,
+        "currency": "CAD",
+        "price_usd": 1044.6043165467627,
+        "airlines": [
+          "Air Canada"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1079.6043165467627,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 785.0,
+        "currency": "USD",
+        "price_usd": 785.0,
+        "airlines": [
+          "Scandinavian Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 820.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-HAG-STO",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "ATH",
+    "last_airport": "ARN",
+    "combined_usd": 1908.4,
+    "combined_cad": 2652.68,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-09",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-10",
+        "depart": "2026-11-13",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-14",
+        "depart": "2026-11-23",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1385.0,
+        "currency": "CAD",
+        "price_usd": 996.4028776978417,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1031.4028776978416,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 842.0,
+        "currency": "USD",
+        "price_usd": 842.0,
+        "airlines": [
+          "Turkish Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 877.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-STO-HAG",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "ATH",
+    "last_airport": "AMS",
+    "combined_usd": 1915.58,
+    "combined_cad": 2662.66,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-09",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-10",
+        "depart": "2026-11-19",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-20",
+        "depart": "2026-11-23",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1281.0,
+        "currency": "CAD",
+        "price_usd": 921.5827338129498,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 956.5827338129498,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 924.0,
+        "currency": "USD",
+        "price_usd": 924.0,
+        "airlines": [
+          "Turkish Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 959.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-HAG-ATH",
+    "start_day": 5,
+    "outbound_date": "2026-11-05",
+    "return_date": "2026-11-23",
+    "first_airport": "ARN",
+    "last_airport": "ATH",
+    "combined_usd": 1924.77,
+    "combined_cad": 2675.43,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-05",
+        "depart": "2026-11-14",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-15",
+        "depart": "2026-11-18",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-19",
+        "depart": "2026-11-23",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1373.0,
+        "currency": "CAD",
+        "price_usd": 987.769784172662,
+        "airlines": [
+          "KLM"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1022.769784172662,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 867.0,
+        "currency": "USD",
+        "price_usd": 867.0,
+        "airlines": [
+          "Turkish Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 902.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-STO-HAG",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "ATH",
+    "last_airport": "AMS",
+    "combined_usd": 1929.26,
+    "combined_cad": 2681.67,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-08",
+        "days": 5
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-09",
+        "depart": "2026-11-18",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-19",
+        "depart": "2026-11-22",
+        "days": 4
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1218.0,
+        "currency": "CAD",
+        "price_usd": 876.2589928057555,
+        "airlines": [
+          "Air Canada",
+          "Aegean"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 911.2589928057555,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 983.0,
+        "currency": "USD",
+        "price_usd": 983.0,
+        "airlines": [
+          "Scandinavian Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1018.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-HAG-ATH",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "ARN",
+    "last_airport": "ATH",
+    "combined_usd": 1942.17,
+    "combined_cad": 2699.62,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-13",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-14",
+        "depart": "2026-11-17",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-18",
+        "depart": "2026-11-22",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1368.0,
+        "currency": "CAD",
+        "price_usd": 984.1726618705037,
+        "airlines": [
+          "KLM"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1019.1726618705037,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 888.0,
+        "currency": "USD",
+        "price_usd": 888.0,
+        "airlines": [
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 923.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "STO-HAG-ATH",
+    "start_day": 2,
+    "outbound_date": "2026-11-02",
+    "return_date": "2026-11-20",
+    "first_airport": "ARN",
+    "last_airport": "ATH",
+    "combined_usd": 1999.95,
+    "combined_cad": 2779.93,
+    "segments": [
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-02",
+        "depart": "2026-11-11",
+        "days": 10
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-12",
+        "depart": "2026-11-15",
+        "days": 4
+      },
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-16",
+        "depart": "2026-11-20",
+        "days": 5
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1547.0,
+        "currency": "CAD",
+        "price_usd": 1112.9496402877699,
+        "airlines": [
+          "Discover Airlines",
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1147.9496402877699,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 817.0,
+        "currency": "USD",
+        "price_usd": 817.0,
+        "airlines": [
+          "Lufthansa"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 852.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  },
+  {
+    "sequence": "ATH-HAG-STO",
+    "start_day": 4,
+    "outbound_date": "2026-11-04",
+    "return_date": "2026-11-22",
+    "first_airport": "ATH",
+    "last_airport": "ARN",
+    "combined_usd": 2029.53,
+    "combined_cad": 2821.04,
+    "segments": [
+      {
+        "code": "ATH",
+        "name": "Athens",
+        "airport": "ATH",
+        "arrive": "2026-11-04",
+        "depart": "2026-11-08",
+        "days": 5
+      },
+      {
+        "code": "HAG",
+        "name": "Den Haag",
+        "airport": "AMS",
+        "arrive": "2026-11-09",
+        "depart": "2026-11-12",
+        "days": 4
+      },
+      {
+        "code": "STO",
+        "name": "Stockholm",
+        "airport": "ARN",
+        "arrive": "2026-11-13",
+        "depart": "2026-11-22",
+        "days": 10
+      }
+    ],
+    "travellers": [
+      {
+        "traveller": "yyc",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 1659.0,
+        "currency": "CAD",
+        "price_usd": 1193.5251798561153,
+        "airlines": [
+          "Air Canada",
+          "Aegean"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 1228.5251798561153,
+        "usable": true,
+        "reject_reason": ""
+      },
+      {
+        "traveller": "atl",
+        "construction": "multi_city",
+        "source": "serpapi",
+        "price": 766.0,
+        "currency": "USD",
+        "price_usd": 766.0,
+        "airlines": [
+          "Scandinavian Airlines"
+        ],
+        "stops_by_leg": [
+          0,
+          0
+        ],
+        "checked_bag": "unknown",
+        "bag_adjustment_usd": 35.0,
+        "all_in_usd": 801.0,
+        "usable": true,
+        "reject_reason": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+name: montreal
+description: Two travelers meet in Montreal — YVR red-eye + CPR (late return red-eye)
+
+party:
+  meet_airports: [YUL]
+  travelers:
+    - id: yvr
+      label: Vancouver
+      origin: YVR
+      currency: CAD
+      stops: any
+      return_preference: latest
+      time_windows:
+        outbound:
+          earliest: "18:00"
+          latest: "24:00"
+          field: departure
+        return:
+          earliest: "18:00"
+          latest: "24:00"
+          field: departure
+    - id: cpr
+      label: Casper
+      origin: CPR
+      currency: USD
+      stops: any
+      return_preference: latest
+      time_windows:
+        # CPR has no red-eye outbound on Oct 8; only early-morning via DEN
+        return:
+          earliest: "16:00"
+          latest: "24:00"
+          field: departure
+
+trip_shape: round_trip
+ticketing: separate_per_traveler
+schedule_priority: red_eye
+
+dates:
+  outbound: "2026-10-08"
+  return: "2026-10-12"
+
+cabin: economy
+pax_per_traveler: 1
+near_match_minutes: 30
+near_match_savings_threshold: 25
+
+benchmark:
+  combined_usd: 1770
+  combined_cad: 2460
+  yvr_cad: 795
+  cpr_usd: 1198
+  note: >
+    YVR AC red-eye out 23:10 + ret 21:30 two OWs CA$795;
+    CPR UA/AC RT late return 16:30 YUL dep US$1198
+
+fx:
+  cad_per_usd: 1.39
+
+target_flights:
+  yvr:
+    outbound: "2026-10-08T23:10:00"
+    return: "2026-10-12T21:30:00"
+  cpr:
+    outbound: "2026-10-08T05:15:00"
+    return: "2026-10-12T16:30:00"

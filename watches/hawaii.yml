@@ -1,0 +1,36 @@
+name: hawaii
+description: Two travelers meet in Hawaii — YVR (nonstop preferred) + CPR (1 stop preferred)
+
+party:
+  meet_airports: [HNL, OGG, KOA]
+  travelers:
+    - id: yvr
+      label: Vancouver
+      origin: YVR
+      currency: CAD
+      stops: nonstop_preferred  # try nonstop first; allow 1-stop if >= CA$50 cheaper
+      stop_fallback: max_1
+    - id: cpr
+      label: Casper
+      origin: CPR
+      currency: USD
+      stops: max_1
+
+trip_shape: round_trip
+ticketing: separate_per_traveler
+
+dates:
+  outbound: "2026-10-08"
+  return: "2026-10-12"
+
+cabin: economy
+pax_per_traveler: 1
+near_match_minutes: 30
+near_match_savings_threshold: 25
+
+benchmark:
+  combined_usd: 1758
+  note: YVR CA$922 RT nonstop + CPR $1,093 RT 1-stop to HNL
+
+fx:
+  cad_per_usd: 1.39  # stated at quote time; override with live if available

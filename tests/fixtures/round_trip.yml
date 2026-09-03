@@ -1,0 +1,21 @@
+trip_shape: round_trip
+origin: YYC
+destination: YVR
+currency: CAD
+dates:
+  outbound: "2026-09-11"
+  return: "2026-09-13"
+stops: any
+time_windows:
+  outbound:
+    field: departure
+    earliest: "18:00"
+    latest: "24:00"
+  return:
+    field: departure
+    earliest: "07:00"
+    latest: "09:00"
+near_match_minutes: 30
+near_match_savings_threshold: 25
+manual_omissions:
+  - Flair Airlines

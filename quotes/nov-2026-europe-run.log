@@ -1,0 +1,81 @@
+[1/42] HAG-STO-ATH start Nov 2 (AMS->ATH)
+[2/42] HAG-ATH-STO start Nov 2 (AMS->ARN)
+[3/42] STO-HAG-ATH start Nov 2 (ARN->ATH)
+[4/42] STO-ATH-HAG start Nov 2 (ARN->AMS)
+[5/42] ATH-HAG-STO start Nov 2 (ATH->ARN)
+[6/42] ATH-STO-HAG start Nov 2 (ATH->AMS)
+[7/42] HAG-STO-ATH start Nov 3 (AMS->ATH)
+[8/42] HAG-ATH-STO start Nov 3 (AMS->ARN)
+[9/42] STO-HAG-ATH start Nov 3 (ARN->ATH)
+[10/42] STO-ATH-HAG start Nov 3 (ARN->AMS)
+[11/42] ATH-HAG-STO start Nov 3 (ATH->ARN)
+[12/42] ATH-STO-HAG start Nov 3 (ATH->AMS)
+[13/42] HAG-STO-ATH start Nov 4 (AMS->ATH)
+[14/42] HAG-ATH-STO start Nov 4 (AMS->ARN)
+[15/42] STO-HAG-ATH start Nov 4 (ARN->ATH)
+[16/42] STO-ATH-HAG start Nov 4 (ARN->AMS)
+[17/42] ATH-HAG-STO start Nov 4 (ATH->ARN)
+[18/42] ATH-STO-HAG start Nov 4 (ATH->AMS)
+[19/42] HAG-STO-ATH start Nov 5 (AMS->ATH)
+[20/42] HAG-ATH-STO start Nov 5 (AMS->ARN)
+[21/42] STO-HAG-ATH start Nov 5 (ARN->ATH)
+[22/42] STO-ATH-HAG start Nov 5 (ARN->AMS)
+[23/42] ATH-HAG-STO start Nov 5 (ATH->ARN)
+[24/42] ATH-STO-HAG start Nov 5 (ATH->AMS)
+[25/42] HAG-STO-ATH start Nov 6 (AMS->ATH)
+[26/42] HAG-ATH-STO start Nov 6 (AMS->ARN)
+[27/42] STO-HAG-ATH start Nov 6 (ARN->ATH)
+[28/42] STO-ATH-HAG start Nov 6 (ARN->AMS)
+[29/42] ATH-HAG-STO start Nov 6 (ATH->ARN)
+[30/42] ATH-STO-HAG start Nov 6 (ATH->AMS)
+[31/42] HAG-STO-ATH start Nov 7 (AMS->ATH)
+[32/42] HAG-ATH-STO start Nov 7 (AMS->ARN)
+[33/42] STO-HAG-ATH start Nov 7 (ARN->ATH)
+[34/42] STO-ATH-HAG start Nov 7 (ARN->AMS)
+[35/42] ATH-HAG-STO start Nov 7 (ATH->ARN)
+[36/42] ATH-STO-HAG start Nov 7 (ATH->AMS)
+[37/42] HAG-STO-ATH start Nov 8 (AMS->ATH)
+[38/42] HAG-ATH-STO start Nov 8 (AMS->ARN)
+[39/42] STO-HAG-ATH start Nov 8 (ARN->ATH)
+[40/42] STO-ATH-HAG start Nov 8 (ARN->AMS)
+[41/42] ATH-HAG-STO start Nov 8 (ATH->ARN)
+[42/42] ATH-STO-HAG start Nov 8 (ATH->AMS)
+
+Saved raw results to /Users/reubenfikreyesus/travel-agent/quotes/nov-2026-europe-analysis.json
+## Recommendation
+Quote status: COMPLETE
+Best sequence: **Den Haag-Athens-Stockholm**
+Start date: **2026-11-04** (first destination day)
+Return date: **2026-11-22**
+Total (all-in est., bags noted): **USD 1479 / CAD 2056**
+FX: 1 USD = 1.39 CAD; unknown/missing checked bags estimated up to USD 70
+
+### Itinerary
+- Den Haag (AMS): 2026-11-04 to 2026-11-07 (4 days)
+- Athens (ATH): 2026-11-08 to 2026-11-12 (5 days)
+- Stockholm (ARN): 2026-11-13 to 2026-11-22 (10 days)
+
+- **YYC**: CAD 983 (multi_city, serpapi; United; stops [0, 0]; checked bag unknown; all-in est. USD 742)
+- **ATL**: USD 702 (multi_city, serpapi; British Airways; stops [0, 0]; checked bag unknown; all-in est. USD 737)
+
+Beat next-best (HAG-ATH-STO, start 2026-11-05) by USD 10
+
+## All sequences (cheapest start date per sequence)
+- Athens-Den Haag-Stockholm: start 2026-11-03, home from ARN USD 1865 / CAD 2593
+- Athens-Stockholm-Den Haag: start 2026-11-02, home from AMS USD 1674 / CAD 2327
+- Den Haag-Athens-Stockholm: start 2026-11-04, home from ARN USD 1479 / CAD 2056
+- Den Haag-Stockholm-Athens: start 2026-11-05, home from ATH USD 1536 / CAD 2135
+- Stockholm-Athens-Den Haag: start 2026-11-03, home from AMS USD 1702 / CAD 2366
+- Stockholm-Den Haag-Athens: start 2026-11-03, home from ATH USD 1798 / CAD 2499
+
+## Top 10 combinations
+1. HAG-ATH-STO · start 2026-11-04 · USD 1479 (YYC CAD 983 multi_city/serpapi; ATL USD 702 multi_city/serpapi)
+2. HAG-ATH-STO · start 2026-11-05 · USD 1489 (YYC CAD 927 multi_city/serpapi; ATL USD 752 multi_city/serpapi)
+3. HAG-STO-ATH · start 2026-11-05 · USD 1536 (YYC CAD 937 multi_city/serpapi; ATL USD 792 multi_city/serpapi)
+4. HAG-STO-ATH · start 2026-11-06 · USD 1536 (YYC CAD 937 multi_city/serpapi; ATL USD 792 multi_city/serpapi)
+5. HAG-STO-ATH · start 2026-11-04 · USD 1566 (YYC CAD 979 multi_city/serpapi; ATL USD 792 multi_city/serpapi)
+6. HAG-ATH-STO · start 2026-11-03 · USD 1581 (YYC CAD 1124 multi_city/serpapi; ATL USD 702 multi_city/serpapi)
+7. HAG-ATH-STO · start 2026-11-02 · USD 1599 (YYC CAD 1149 multi_city/serpapi; ATL USD 702 multi_city/serpapi)
+8. HAG-STO-ATH · start 2026-11-03 · USD 1634 (YYC CAD 947 multi_city/serpapi; ATL USD 883 multi_city/serpapi)
+9. HAG-STO-ATH · start 2026-11-02 · USD 1653 (YYC CAD 979 multi_city/serpapi; ATL USD 879 multi_city/serpapi)
+10. ATH-STO-HAG · start 2026-11-02 · USD 1674 (YYC CAD 1020 multi_city/serpapi; ATL USD 870 multi_city/serpapi)

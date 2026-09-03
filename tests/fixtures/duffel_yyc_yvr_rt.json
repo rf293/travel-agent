@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "id": "off_test_1",
+      "total_amount": "301.00",
+      "total_currency": "CAD",
+      "slices": [
+        {
+          "segments": [
+            {
+              "origin": {"iata_code": "YYC"},
+              "destination": {"iata_code": "YVR"},
+              "departing_at": "2026-09-11T19:00:00",
+              "arriving_at": "2026-09-11T20:30:00",
+              "marketing_carrier": {"iata_code": "WS", "name": "WestJet"},
+              "operating_carrier": {"iata_code": "WS", "name": "WestJet"},
+              "marketing_carrier_flight_number": "100",
+              "passengers": [
+                {
+                  "baggages": [
+                    {"type": "carry_on", "quantity": 1},
+                    {"type": "checked", "quantity": 0}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "origin": {"iata_code": "YVR"},
+              "destination": {"iata_code": "YYC"},
+              "departing_at": "2026-09-13T07:30:00",
+              "arriving_at": "2026-09-13T09:00:00",
+              "marketing_carrier": {"iata_code": "WS", "name": "WestJet"},
+              "operating_carrier": {"iata_code": "WS", "name": "WestJet"},
+              "marketing_carrier_flight_number": "101",
+              "passengers": [
+                {
+                  "baggages": [
+                    {"type": "carry_on", "quantity": 1},
+                    {"type": "checked", "quantity": 0}
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

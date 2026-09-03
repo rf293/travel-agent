@@ -1,0 +1,32 @@
+name: rome-paris
+description: Open-jaw YVR to Rome, home from Paris — one multi-city ticket
+
+party:
+  travelers:
+    - id: main
+      label: Traveler
+      count: 1
+
+trip_shape: open_jaw
+ticketing: one_ticket
+
+legs:
+  - origin: YVR
+    destination: FCO
+    date_options: ["2026-09-12", "2026-09-13", "2026-09-14"]
+  - origin: CDG
+    destination: YVR
+    date: "2026-09-30"
+
+stops: max_1
+cabin: economy
+currency: CAD
+near_match_minutes: 30
+near_match_savings_threshold: 25
+
+benchmark:
+  amount: 1173
+  currency: CAD
+  note: Lufthansa Economy Light multi-city via MUC/FRA
+
+alliance_preference: STAR_ALLIANCE

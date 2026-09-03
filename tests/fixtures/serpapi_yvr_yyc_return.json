@@ -1,0 +1,38 @@
+{
+  "best_flights": [
+    {
+      "price": 84,
+      "flights": [
+        {
+          "duration": "1 hr 30 min",
+          "segments": [
+            {
+              "departure_airport": {"id": "YVR", "time": "2026-09-13 06:45"},
+              "arrival_airport": {"id": "YYC", "time": "2026-09-13 08:15"},
+              "airline": "WS",
+              "flight_number": "WS136",
+              "duration": "1 hr 30 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "price": 427,
+      "flights": [
+        {
+          "duration": "1 hr 30 min",
+          "segments": [
+            {
+              "departure_airport": {"id": "YVR", "time": "2026-09-13 07:30"},
+              "arrival_airport": {"id": "YYC", "time": "2026-09-13 09:00"},
+              "airline": "WS",
+              "flight_number": "WS123",
+              "duration": "1 hr 30 min"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
