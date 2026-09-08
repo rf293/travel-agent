@@ -36,6 +36,7 @@ from scripts.lib.rules import (  # noqa: E402
 )
 from scripts.providers.amadeus_provider import AmadeusProvider  # noqa: E402
 from scripts.providers.duffel_provider import DuffelProvider  # noqa: E402
+from scripts.providers.letsfg_provider import LetsFGProvider  # noqa: E402
 from scripts.providers.serpapi_provider import SerpApiProvider  # noqa: E402
 
 load_repo_env()
@@ -148,15 +149,22 @@ def _assess_candidates(
 
 
 class SearchWaterfall:
-    def __init__(self):
+    def __init__(self, include_letsfg: bool = True):
         self.serp = SerpApiProvider()
+        self.letsfg = LetsFGProvider()
         self.duffel = DuffelProvider()
         self.amadeus = AmadeusProvider()
+        self.include_letsfg = include_letsfg
         self.log: list[str] = []
 
     @property
     def has_provider(self) -> bool:
-        return self.serp.available or self.duffel.available or self.amadeus.available
+        return (
+            self.serp.available
+            or (self.include_letsfg and self.letsfg.available)
+            or self.duffel.available
+            or self.amadeus.available
+        )
 
     def _note(self, msg: str) -> None:
         self.log.append(msg)
@@ -173,15 +181,27 @@ class SearchWaterfall:
     ) -> tuple[list[FareOption], list[str]]:
         gl = GL_MAP.get(currency, "us")
         notes: list[str] = []
+        merged: list[FareOption] = []
         if self.serp.available:
             options, status, err = self.serp.search_round_trip_options(
                 origin, dest, out, ret, currency, adults, stops_rule, gl
             )
             notes.append(f"serpapi RT {origin}-{dest}: {status.value}" + (f" ({err})" if err else ""))
-            if options:
-                return options, notes
+            merged.extend(options)
             if status == SourceStatus.BLOCKED:
                 self._note(f"SerpAPI blocked for RT {origin}-{dest}")
+        if self.include_letsfg and self.letsfg.available:
+            options, status, err = self.letsfg.search_round_trip_options(
+                origin, dest, out, ret, currency, adults, stops_rule
+            )
+            notes.append(
+                f"letsfg RT {origin}-{dest}: {status.value}"
+                + (f" ({err})" if err else "")
+                + f" [{self.letsfg.auth_mode}]"
+            )
+            merged.extend(options)
+        if merged:
+            return merged, notes
         if self.duffel.available:
             options, status, err = self.duffel.search_itinerary_options(
                 [(origin, dest, out), (dest, origin, ret)],
@@ -231,13 +251,25 @@ class SearchWaterfall:
     ) -> tuple[list[FareOption], list[str]]:
         gl = GL_MAP.get(currency, "us")
         notes: list[str] = []
+        merged: list[FareOption] = []
         if self.serp.available:
             options, status, err = self.serp.search_one_way_options(
                 origin, dest, date, currency, adults, stops_rule, gl, label
             )
             notes.append(f"serpapi OW {label}: {status.value}" + (f" ({err})" if err else ""))
-            if options:
-                return options, notes
+            merged.extend(options)
+        if self.include_letsfg and self.letsfg.available:
+            options, status, err = self.letsfg.search_one_way_options(
+                origin, dest, date, currency, adults, stops_rule, label
+            )
+            notes.append(
+                f"letsfg OW {label}: {status.value}"
+                + (f" ({err})" if err else "")
+                + f" [{self.letsfg.auth_mode}]"
+            )
+            merged.extend(options)
+        if merged:
+            return merged, notes
         if self.duffel.available:
             options, status, err = self.duffel.search_itinerary_options(
                 [(origin, dest, date)],
@@ -754,8 +786,8 @@ def run_hawaii(watch: dict) -> str:
     if not wf.has_provider:
         sections.append("Quote status: INCOMPLETE")
         sections.append(
-            "ERROR: Set SERPAPI_API_KEY, DUFFEL_API_KEY, and/or "
-            "AMADEUS_API_KEY + AMADEUS_API_SECRET in .env"
+            "ERROR: Set SERPAPI_API_KEY, LETSFG_BEARER_TOKEN (letsfg auth), "
+            "DUFFEL_API_KEY, and/or AMADEUS_API_KEY + AMADEUS_API_SECRET in .env"
         )
         sections.append("")
         sections.append("Deep links (verify manually):")

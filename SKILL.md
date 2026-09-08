@@ -67,10 +67,11 @@ Time windows are local to the departure airport. Treat “between” as strict, 
 Run `scripts/search.py` (or call its providers). Order:
 
 1. **SerpAPI** (`SERPAPI_API_KEY`) — Google Flights JSON; supports RT, OW, multi-city (`type=3`)
-2. **Duffel** (`DUFFEL_API_KEY`) — airline offer search via GDS/NDC
-3. **Amadeus** (`AMADEUS_API_KEY`, `AMADEUS_API_SECRET`) — GDS one-ticket open-jaw/RT
-3. **Deep links** — emit Kayak / Google URLs for human verification
-4. **User paste** — screenshot or copied fare = ground truth
+2. **LetsFG** (`LETSFG_BEARER_TOKEN` via `letsfg auth`) — multi-OTA + airline connectors + split tickets; merges with SerpAPI when available
+3. **Duffel** (`DUFFEL_API_KEY`) — airline offer search via GDS/NDC
+4. **Amadeus** (`AMADEUS_API_KEY`, `AMADEUS_API_SECRET`) — GDS one-ticket open-jaw/RT
+5. **Deep links** — emit Kayak / Google URLs for human verification
+6. **User paste** — screenshot or copied fare = ground truth
 
 On captcha, empty multi-city map, or HTTP block: mark source `BLOCKED`, try next source. **Do not retry the same blocked source in the same run.**
 
