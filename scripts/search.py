@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Travel Agent search — SerpAPI → Duffel → Amadeus waterfall."""
+"""Travel Agent search — SerpAPI → LetsFG → Duffel waterfall."""
 
 from __future__ import annotations
 
@@ -34,7 +34,6 @@ from scripts.lib.rules import (  # noqa: E402
     assess_option,
     rank_options,
 )
-from scripts.providers.amadeus_provider import AmadeusProvider  # noqa: E402
 from scripts.providers.duffel_provider import DuffelProvider  # noqa: E402
 from scripts.providers.letsfg_provider import LetsFGProvider  # noqa: E402
 from scripts.providers.serpapi_provider import SerpApiProvider  # noqa: E402
@@ -153,7 +152,6 @@ class SearchWaterfall:
         self.serp = SerpApiProvider()
         self.letsfg = LetsFGProvider()
         self.duffel = DuffelProvider()
-        self.amadeus = AmadeusProvider()
         self.include_letsfg = include_letsfg
         self.log: list[str] = []
 
@@ -163,7 +161,6 @@ class SearchWaterfall:
             self.serp.available
             or (self.include_letsfg and self.letsfg.available)
             or self.duffel.available
-            or self.amadeus.available
         )
 
     def _note(self, msg: str) -> None:
@@ -211,17 +208,6 @@ class SearchWaterfall:
                 construction="round_trip",
             )
             notes.append(f"duffel RT {origin}-{dest}: {status.value}" + (f" ({err})" if err else ""))
-            if options:
-                return options, notes
-        if self.amadeus.available:
-            options, status, err = self.amadeus.search_itinerary_options(
-                [(origin, dest, out), (dest, origin, ret)],
-                currency=currency,
-                adults=adults,
-                max_stops=_max_stops(stops_rule),
-                construction="round_trip",
-            )
-            notes.append(f"amadeus RT {origin}-{dest}: {status.value}" + (f" ({err})" if err else ""))
             if options:
                 return options, notes
         return [], notes
@@ -279,20 +265,6 @@ class SearchWaterfall:
                 construction=label,
             )
             notes.append(f"duffel OW {label}: {status.value}" + (f" ({err})" if err else ""))
-            for option in options:
-                option.construction = label
-                option.ticketing = "two_tickets"
-            if options:
-                return options, notes
-        if self.amadeus.available:
-            options, status, err = self.amadeus.search_itinerary_options(
-                [(origin, dest, date)],
-                currency=currency,
-                adults=adults,
-                max_stops=_max_stops(stops_rule),
-                construction=label,
-            )
-            notes.append(f"amadeus OW {label}: {status.value}" + (f" ({err})" if err else ""))
             for option in options:
                 option.construction = label
                 option.ticketing = "two_tickets"
@@ -366,17 +338,6 @@ class SearchWaterfall:
                 construction="multi_city",
             )
             notes.append(f"duffel multi-city: {status.value}" + (f" ({err})" if err else ""))
-            if options:
-                return options, notes
-        if self.amadeus.available:
-            options, status, err = self.amadeus.search_itinerary_options(
-                legs,
-                currency=currency,
-                adults=adults,
-                max_stops=_max_stops(stops_rule),
-                construction="multi_city",
-            )
-            notes.append(f"amadeus multi-city: {status.value}" + (f" ({err})" if err else ""))
             if options:
                 return options, notes
         return [], notes
@@ -787,7 +748,7 @@ def run_hawaii(watch: dict) -> str:
         sections.append("Quote status: INCOMPLETE")
         sections.append(
             "ERROR: Set SERPAPI_API_KEY, LETSFG_BEARER_TOKEN (letsfg auth), "
-            "DUFFEL_API_KEY, and/or AMADEUS_API_KEY + AMADEUS_API_SECRET in .env"
+            "and/or DUFFEL_API_KEY in .env"
         )
         sections.append("")
         sections.append("Deep links (verify manually):")

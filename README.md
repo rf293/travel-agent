@@ -2,14 +2,14 @@
 
 Grok skill, Chat personas, and API-backed search for live flight pricing.
 
-The agent quotes the cheapest **all-in** fare that matches dates, cabin, time, and stop rules. It always prices the matching **one-ticket** fare (round-trip or multi-city) **and** two one-ways, then recommends whichever is cheaper. Flights within the configured `near_match_minutes` tolerance (30 by default) are retained and clearly labelled. Scraping Google Flights in a headless browser is **not** used — SerpAPI, Duffel, and Amadeus provide structured quotes.
+The agent quotes the cheapest **all-in** fare that matches dates, cabin, time, and stop rules. It always prices the matching **one-ticket** fare (round-trip or multi-city) **and** two one-ways, then recommends whichever is cheaper. Flights within the configured `near_match_minutes` tolerance (30 by default) are retained and clearly labelled. Scraping Google Flights in a headless browser is **not** used — SerpAPI, LetsFG, and Duffel provide structured quotes.
 
 ## Files
 
 | File | Use |
 |---|---|
 | `SKILL.md` | Grok Build skill (`/travel-agent`). Copy to `~/.grok/skills/travel-agent/SKILL.md`. |
-| `scripts/search.py` | CLI search — SerpAPI → Duffel → Amadeus waterfall |
+| `scripts/search.py` | CLI search — SerpAPI → LetsFG → Duffel waterfall |
 | `watches/*.yml` | Trip definitions (dates, flex, time windows, stop rules, benchmarks) |
 | `chat-persona.md` | Grok Chat persona — **Rome/Paris** daily watch |
 | `hawaii-chat-persona.md` | Grok Chat persona — **Hawaii** daily watch |
@@ -20,15 +20,15 @@ The agent quotes the cheapest **all-in** fare that matches dates, cabin, time, a
 ```bash
 pip install -r requirements.txt
 cp .env.example .env
-# Add SERPAPI_API_KEY, DUFFEL_API_KEY, and/or AMADEUS_API_KEY + AMADEUS_API_SECRET
+# Add SERPAPI_API_KEY, LETSFG_BEARER_TOKEN (letsfg auth), and/or DUFFEL_API_KEY
 ```
 
 The repo loads `.env` automatically for Python scripts, tests, and Cursor/VS Code terminals (see `.vscode/settings.json`). Keep secrets in `.env` only — it is gitignored.
 
 Get keys:
 - [SerpAPI Google Flights](https://serpapi.com/google-flights-api)
-- [Amadeus for Developers](https://developers.amadeus.com/) (free test tier)
-
+- [Duffel](https://duffel.com/) (test tokens start with `duffel_test_`)
+- LetsFG: run `letsfg auth` (card connect; search is free)
 ## Run searches
 
 ```bash
