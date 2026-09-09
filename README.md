@@ -11,8 +11,8 @@ The agent quotes the cheapest **all-in** fare that matches dates, cabin, time, a
 | `SKILL.md` | Grok Build skill (`/travel-agent`). Copy to `~/.grok/skills/travel-agent/SKILL.md`. |
 | `scripts/search.py` | CLI search — SerpAPI → LetsFG → Duffel waterfall |
 | `watches/*.yml` | Trip definitions (dates, flex, time windows, stop rules, benchmarks) |
-| `chat-persona.md` | Grok Chat persona — **Rome/Paris** daily watch |
 | `hawaii-chat-persona.md` | Grok Chat persona — **Hawaii** daily watch |
+| `montreal-chat-persona.md` | Grok Chat persona — **Montreal** daily watch |
 | `quotes/` | Saved daily run output (gitignored) |
 
 ## Setup
@@ -43,16 +43,15 @@ python scripts/search.py --watch hawaii --save   # also writes quotes/YYYY-MM-DD
 ```bash
 mkdir -p ~/.grok/skills/travel-agent
 cp SKILL.md ~/.grok/skills/travel-agent/
-cp chat-persona.md hawaii-chat-persona.md ~/.grok/skills/travel-agent/
+cp hawaii-chat-persona.md montreal-chat-persona.md ~/.grok/skills/travel-agent/
 ```
 
 Then say `travel agent` or `/travel-agent`.
 
 ## Grok Chat
 
-Paste `chat-persona.md`, `hawaii-chat-persona.md`, or `montreal-chat-persona.md` into Custom Instructions. Daily prompts:
+Paste `hawaii-chat-persona.md` or `montreal-chat-persona.md` into Custom Instructions. Daily prompts:
 
-- `Run the daily Rome/Paris check`
 - `Run the daily Hawaii check`
 - `Run the daily Montreal check`
 
