@@ -104,7 +104,35 @@ def effective_usd(option: FareOption) -> float:
     return to_usd(option.total_price, option.currency) + bag_adjustment_usd(option)
 
 
+def within_slice_airport_changes(option: FareOption) -> list[str]:
+    """Flag airport changes inside connections only — not open-jaw gaps between slices."""
+    legs = option.legs
+    stops_by_leg = option.stops_by_leg
+    if not legs or not stops_by_leg:
+        return list(option.airport_changes)
+    changes: list[str] = []
+    index = 0
+    for stops in stops_by_leg:
+        segment_count = max(1, int(stops) + 1)
+        for offset in range(segment_count - 1):
+            previous = legs[index + offset] if index + offset < len(legs) else None
+            following = legs[index + offset + 1] if index + offset + 1 < len(legs) else None
+            if (
+                previous
+                and following
+                and previous.destination
+                and following.origin
+                and previous.destination != following.origin
+            ):
+                changes.append(f"{previous.destination}->{following.origin}")
+        index += segment_count
+    return changes
+
+
 def assess_candidates(options: list[FareOption]) -> list[FareOption]:
+    for option in options:
+        if option.construction in {"multi_city", "two_one_ways", "round_trip"}:
+            option.airport_changes = within_slice_airport_changes(option)
     assessed = [assess_option(option, max_stops=MAX_STOPS) for option in options]
     apply_layover_preference(assessed)
     return assessed
