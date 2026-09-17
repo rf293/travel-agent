@@ -1,7 +1,9 @@
 """LetsFG cloud flight search (PFS Bearer or Developer API).
 
 PFS (preferred): POST https://letsfg.co/api/search + poll /api/results/<id>
-  Auth: LETSFG_BEARER_TOKEN or ~/.letsfg/config.json (from `letsfg auth`).
+  Auth: run `letsfg auth` once; tokens in ~/.letsfg/config.json auto-refresh
+  (~1h access token, ~30d refresh). Optional override: LETSFG_BEARER_TOKEN
+  (static — does not refresh; prefer config for long-lived agents).
 
 Developer API (fallback): POST /developers/api/v1/flights/search
   Auth: LETSFG_API_KEY — prepaid credits; avoid unless intentionally using it.
@@ -44,6 +46,8 @@ class LetsFGProvider:
         api_key: str | None = None,
         wait_for_split: bool | None = None,
     ):
+        # Explicit non-empty ctor token stays fixed (tests / one-off overrides).
+        self._bearer_override = bool((bearer_token or "").strip())
         self.bearer_token = (bearer_token or self._resolve_bearer() or "").strip()
         self.api_key = (api_key or os.getenv("LETSFG_API_KEY", "")).strip()
         if wait_for_split is None:
@@ -51,7 +55,8 @@ class LetsFGProvider:
         self.wait_for_split = wait_for_split
 
     @staticmethod
-    def _resolve_bearer() -> str:
+    def _resolve_bearer_from_config() -> str:
+        """Read cached access token without refreshing (legacy / no-letsfg fallback)."""
         env = os.getenv("LETSFG_BEARER_TOKEN", "").strip()
         if env:
             return env
@@ -63,11 +68,31 @@ class LetsFGProvider:
         except (OSError, json.JSONDecodeError):
             return ""
         auth = data.get("pfs_auth") or {}
-        token = str(auth.get("token") or "").strip()
-        expires_at = float(auth.get("expires_at") or 0)
-        if token and time.time() < expires_at - 300:
-            return token
-        return token  # may still work; refresh is handled by `letsfg auth`
+        return str(auth.get("token") or "").strip()
+
+    @staticmethod
+    def _resolve_bearer() -> str:
+        """Return a valid PFS bearer, refreshing via stored refresh token when needed."""
+        try:
+            from letsfg.connectors.auth import BearerTokenError, ensure_bearer_token
+        except ImportError:
+            return LetsFGProvider._resolve_bearer_from_config()
+        try:
+            return (ensure_bearer_token() or "").strip()
+        except BearerTokenError:
+            return ""
+        except Exception:
+            # Refresh HTTP failed (offline, TLS, etc.) — use cached access token if any.
+            return LetsFGProvider._resolve_bearer_from_config()
+
+    def _active_bearer(self) -> str:
+        """Bearer for the next PFS call; refreshes unless ctor override is set."""
+        if self._bearer_override:
+            return self.bearer_token
+        token = self._resolve_bearer()
+        if token:
+            self.bearer_token = token
+        return self.bearer_token
 
     @property
     def available(self) -> bool:
@@ -191,13 +216,14 @@ class LetsFGProvider:
         return options, SourceStatus.OK, ""
 
     def _run_search(self, payload: dict[str, Any]) -> tuple[dict[str, Any] | None, SourceStatus, str]:
-        if self.bearer_token:
+        if self._active_bearer():
             return self._pfs_search(payload)
         return self._developer_search(payload)
 
     def _pfs_search(self, payload: dict[str, Any]) -> tuple[dict[str, Any] | None, SourceStatus, str]:
+        bearer = self._active_bearer()
         headers = {
-            "Authorization": f"Bearer {self.bearer_token}",
+            "Authorization": f"Bearer {bearer}",
             "User-Agent": USER_AGENT,
             "X-Client-Type": "travel-agent",
             "Content-Type": "application/json",

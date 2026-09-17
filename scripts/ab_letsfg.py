@@ -218,8 +218,8 @@ def run_watch(
     letsfg = LetsFGProvider()
     if not letsfg.available:
         lines.append(
-            "LetsFG unavailable: set LETSFG_BEARER_TOKEN or run `letsfg auth` "
-            "(card connect at letsfg.co/connect — nothing charged for search)."
+            "LetsFG unavailable: run `letsfg auth` once "
+            "(card connect at letsfg.co/connect — nothing charged; token auto-refreshes)."
         )
         lines.append("")
 
