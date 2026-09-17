@@ -95,6 +95,30 @@ class LetsFGParseTests(unittest.TestCase):
             self.assertEqual(status, SourceStatus.NO_KEY)
             self.assertEqual(options, [])
 
+    def test_explicit_bearer_skips_refresh(self):
+        provider = LetsFGProvider(bearer_token="fixed-token", api_key="")
+        with mock.patch.object(LetsFGProvider, "_resolve_bearer") as resolve:
+            self.assertEqual(provider._active_bearer(), "fixed-token")
+            resolve.assert_not_called()
+
+    def test_active_bearer_refreshes_when_not_overridden(self):
+        with mock.patch.object(LetsFGProvider, "_resolve_bearer", return_value="fresh"):
+            provider = LetsFGProvider(bearer_token="", api_key="")
+            self.assertEqual(provider.bearer_token, "fresh")
+            with mock.patch.object(
+                LetsFGProvider, "_resolve_bearer", return_value="rotated"
+            ) as resolve:
+                self.assertEqual(provider._active_bearer(), "rotated")
+                resolve.assert_called()
+                self.assertEqual(provider.bearer_token, "rotated")
+
+    def test_resolve_bearer_uses_ensure_bearer_token(self):
+        with mock.patch(
+            "letsfg.connectors.auth.ensure_bearer_token",
+            return_value="ensured-token",
+        ):
+            self.assertEqual(LetsFGProvider._resolve_bearer(), "ensured-token")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -786,7 +786,7 @@ def run_hawaii(watch: dict) -> str:
     if not wf.has_provider:
         sections.append("Quote status: INCOMPLETE")
         sections.append(
-            "ERROR: Set SERPAPI_API_KEY, LETSFG_BEARER_TOKEN (letsfg auth), "
+            "ERROR: Set SERPAPI_API_KEY, run `letsfg auth` (PFS), "
             "DUFFEL_API_KEY, and/or AMADEUS_API_KEY + AMADEUS_API_SECRET in .env"
         )
         sections.append("")
