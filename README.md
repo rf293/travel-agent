@@ -70,6 +70,19 @@ python scripts/search.py --watch montreal
 python scripts/search.py --watch montreal --save
 ```
 
+**Maui / Oahu (LetsFG only)** — separate tickets; YVR ⇄ OGG/HNL + CPR ⇄ same; out 8 Oct after 14:00, back arriving YVR by 01:00 / CPR by 10:00 on 13 Oct. Reports cheapest any-stops, cheapest nonstop, and flag-only shared-leg pairs. ~20 LetsFG searches, paced under the PFS 10-per-10-minutes limit.
+
+```bash
+python scripts/price_trip_lfg.py --watch maui-oahu --cache quotes/lfg-cache --save
+```
+
+On a remote VM where `letsfg auth` can't receive the browser redirect:
+
+```bash
+python scripts/letsfg_remote_auth.py start            # a person opens the link and approves
+python scripts/letsfg_remote_auth.py finish '<the 127.0.0.1/callback URL the browser landed on>'
+```
+
 ### Time-window configuration
 
 Use local airport time for each leg. “Between” is strict; nearby flights remain visible as near matches:
@@ -88,6 +101,8 @@ near_match_minutes: 30
 near_match_savings_threshold: 25
 manual_omissions: ["Flair Airlines"]  # presentation-time omission only
 ```
+
+For bounds that cross midnight, use local datetimes instead of clock times — e.g. `field: arrival` with `latest_at: "2026-10-13T01:00"`.
 
 Carrier omissions are deliberately manual. They are not sent as hard provider filters, so the output can show what was omitted and the fare that was sacrificed.
 

@@ -7,4 +7,5 @@ __pycache__/
 .venv/
 venv/
 quotes/*.md
+quotes/lfg-cache/
 !quotes/.gitkeep
